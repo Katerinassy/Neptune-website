@@ -1,0 +1,45 @@
+/* Общие стили для подвала */
+.footer {
+    background-color: #404596;
+    color: #ffffff;
+    padding: 20px 40px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #00d9ff;
+}
+
+.footer-text {
+    font-size: 14px;
+    margin: 5px 0;
+    color: #e6e6e6;
+}
+
+/* Нижняя часть подвала */
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #ffffff;
+    padding-top: 10px;
+}
+
+.footer-bottom-text {
+    font-size: 12px;
+    color: #cccccc;
+}

@@ -1,0 +1,58 @@
+/* General styles for the header */
+.header {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: row; /* Horizontal layout */
+    justify-content: space-between; /* Space between logo and navbar */
+    align-items: center; /* Center items vertically */
+    padding: 20px; /* Add some padding */
+    background-color: #ffffff; /* White background */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Soft shadow effect */
+}
+
+/* Styles for the logo */
+.logo img {
+    height: 80px; /* Set a fixed height for the logo */
+    width: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s; /* Animation on hover */
+}
+
+.logo img:hover {
+    transform: scale(1.1); /* Zoom effect on hover */
+}
+
+/* Navigation styles */
+.navbar {
+    display: flex; /* Use flexbox for navigation items */
+    gap: 40px; /* Space between navigation links */
+}
+
+/* Styles for navigation links */
+.navbar__link {
+    text-decoration: none; /* Remove underline from links */
+    color: #007bff; /* Link color */
+    font-weight: bold; /* Make links bold */
+    transition: color 0.3s, text-shadow 0.3s; /* Smooth transition for hover effect */
+    font-size: 18px; /* Size of navigation links */
+}
+
+.navbar__link:hover {
+    color: #0056b3; /* Darker color on hover */
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2); /* Shadow effect on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .navbar {
+        flex-direction: column; /* Stack navigation links vertically */
+        gap: 10px; /* Reduce gap between links */
+    }
+
+    .navbar__link {
+        font-size: 24px; /* Adjust font size for smaller screens if needed */
+    }
+}
