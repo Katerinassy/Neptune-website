@@ -1,58 +1,62 @@
-/* General styles for the header */
-.header {
-    display: flex; /* Use flexbox for layout */
-    flex-direction: row; /* Horizontal layout */
-    justify-content: space-between; /* Space between logo and navbar */
-    align-items: center; /* Center items vertically */
-    padding: 20px; /* Add some padding */
-    background-color: #BDEAFF; /* White background */
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Soft shadow effect */
+@font-face {
+    font-family: 'Malgun';
+    src: url('/public/font/MorfinSans-Regular.ttf') format('truetype');
 }
 
-/* Styles for the logo */
+.header {
+    position: sticky; /* Делаем шапку "липкой" */
+    top: 0; /* Прилипаем к верхнему краю */
+    z-index: 1000; /* Убедимся, что шапка поверх других элементов */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #BDEAFF;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    font-family: 'Malgun', sans-serif;
+}
+
 .logo img {
-    height: 50px; /* Set a fixed height for the logo */
-    width: auto; /* Maintain aspect ratio */
-    transition: transform 0.3s; /* Animation on hover */
+    height: 50px;
+    width: auto;
+    transition: transform 0.3s;
 }
 
 .logo img:hover {
-    transform: scale(1.1); /* Zoom effect on hover */
+    transform: scale(1.1);
 }
 
-/* Navigation styles */
 .navbar {
-    display: flex; /* Use flexbox for navigation items */
-    gap: 40px; /* Space between navigation links */
+    display: flex;
+    gap: 40px;
+    font-family: 'Malgun', sans-serif; /* Применяем шрифт */
 }
 
-/* Styles for navigation links */
 .navbar__link {
-    text-decoration: none; /* Remove underline from links */
-    color: #007bff; /* Link color */
-    font-weight: bold; /* Make links bold */
-    transition: color 0.3s, text-shadow 0.3s; /* Smooth transition for hover effect */
-    font-size: 25px; /* Size of navigation links */
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    transition: color 0.3s, text-shadow 0.3s;
+    font-size: 25px;
+    font-family: 'Malgun', sans-serif; /* Применяем шрифт */
 }
 
 .navbar__link:hover {
-    color: #0056b3; /* Darker color on hover */
-    text-shadow: 0 1px 2px rgba(0,0,0,0.2); /* Shadow effect on hover */
+    color: #0056b3;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
 }
 
-/* Responsive styles */
 @media (max-width: 768px) {
     .header {
-        flex-direction: column; /* Stack items vertically on smaller screens */
-        align-items: flex-start; /* Align items to the start */
+        flex-direction: column;
+        align-items: flex-start;
     }
-
     .navbar {
-        flex-direction: column; /* Stack navigation links vertically */
-        gap: 10px; /* Reduce gap between links */
+        flex-direction: column;
+        gap: 10px;
     }
-
     .navbar__link {
-        font-size: 24px; /* Adjust font size for smaller screens if needed */
+        font-size: 24px;
     }
 }

@@ -32,7 +32,7 @@ const About = () => {
               возможностями здоровья.
             </p>
           </div>
-          <img src={img2} alt="Сеансы дельфинотерапии" className="section-image" />
+          <img src={img3} alt="Сеансы дельфинотерапии" className="section-image" />
         </div>
         <div className="section">
           <div className="section-content">
@@ -43,7 +43,7 @@ const About = () => {
               детская площадка, бассейн и аниматоры.
             </p>
           </div>
-          <img src={img3} alt="Отдых на базе" className="section-image" />
+          <img src={img2} alt="Отдых на базе" className="section-image" />
         </div>
       </div>
     </div>
