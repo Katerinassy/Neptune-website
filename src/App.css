@@ -1,3 +1,12 @@
+body, html {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #ffffff 0%, #A5A7CE 68.18%, #404596 100%); 
+ 
+}
+
+/* Применяем градиент ко всем блокам */
+
 .App {
   text-align: center;
 }

@@ -1,13 +1,12 @@
-body {
-  margin: 0;
-  font-family: 'MorinSans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: 'Morfin';
+  src: url('/public//font/MorfinSans-Regular.ttf') format('truetype');
+  font-display: swap;
+  font-weight: normal;
+  font-style: normal;
 }
 
-code {
-  font-family: 'MorinSans', source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: 'Morfin', -apple-system, sans-serif !important;
+  margin: 0;
 }

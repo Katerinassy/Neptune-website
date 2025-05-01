@@ -32,8 +32,8 @@ const DolphinEvents = () => {
         </div>
       </div>
 
-      {/* Разделитель */}
-      <div className="divider-line"></div>
+      {/* Волнистый разделитель */}
+      <div className="divider-wave"></div>
 
       {/* Секция мини-шоу с фото */}
       <div className="event-section with-image reversed">
@@ -51,8 +51,8 @@ const DolphinEvents = () => {
         </div>
       </div>
 
-      {/* Разделитель */}
-      <div className="divider-line"></div>
+      {/* Волнистый разделитель (реверсивный) */}
+      <div className="divider-wave reverse"></div>
 
       {/* Секция местных обитателей */}
       <div className="event-section">

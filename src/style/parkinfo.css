@@ -10,25 +10,11 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 1000px; /* Allow content to adapt to height */
-    background: url('/src/image/body.svg') no-repeat center center / cover; /* Block background */
-    color: #000; /* Text color */
-    padding: 20px;
-    margin: 0 auto; /* Center block */
-    max-width: 1800px; /* Limit block width */
+    height: 600px; /* Allow content to adapt to height */
+    background: url('/src/image/Group\ 2\ \(2\).svg') no-repeat center center / cover; /* Block background */
 }
 
-.park-title {
-    font-size: 2.5em;
-    font-weight: bold;
-    margin-bottom: 15px;
-    color: #007BFF; /* Title color */
-}
 
-.park-phone, .park-address {
-    font-size: 1.2em;
-    margin: 10px 0;
-}
 
 /* Adaptability */
 @media (max-width: 768px) {

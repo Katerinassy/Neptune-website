@@ -5,13 +5,13 @@
     justify-content: space-between; /* Space between logo and navbar */
     align-items: center; /* Center items vertically */
     padding: 20px; /* Add some padding */
-    background-color: #ffffff; /* White background */
+    background-color: #BDEAFF; /* White background */
     box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Soft shadow effect */
 }
 
 /* Styles for the logo */
 .logo img {
-    height: 80px; /* Set a fixed height for the logo */
+    height: 50px; /* Set a fixed height for the logo */
     width: auto; /* Maintain aspect ratio */
     transition: transform 0.3s; /* Animation on hover */
 }
@@ -32,7 +32,7 @@
     color: #007bff; /* Link color */
     font-weight: bold; /* Make links bold */
     transition: color 0.3s, text-shadow 0.3s; /* Smooth transition for hover effect */
-    font-size: 18px; /* Size of navigation links */
+    font-size: 25px; /* Size of navigation links */
 }
 
 .navbar__link:hover {
