@@ -1,4 +1,7 @@
-/* Основные стили страницы */
+@font-face {
+  font-family: 'Malgun Gothic';
+  src: url('//public/font/Malgun\ Gothic.ttf') format('truetype');
+}
 .dolphin-page {
   font-family: 'Arial', sans-serif;
   color: #333;
@@ -6,11 +9,10 @@
   margin: 0 auto;
 }
 
-/* Шапка с фоновым изображением */
+/* Шапка как на фото */
 .dolphin-header {
-  height: 400px;
-  background-size: cover;
-  background-position: center;
+  height: 500px;
+  background-color: #0066cc;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -19,18 +21,40 @@
 }
 
 .header-overlay {
-  background-color: rgba(0, 102, 204, 0.6);
-  padding: 30px 60px;
+  width: 100%;
+  padding: 30px 0;
   text-align: center;
 }
 
+.title-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
 .dolphin-header h1 {
-  color: white;
-  font-size: 3rem;
+  color: #0066cc;
+  font-size: 4.5rem;
   text-transform: uppercase;
-  letter-spacing: 3px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  letter-spacing: 5px;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
   margin: 0;
+  font-weight: 900;
+  font-family: 'Malgun Gothic', sans-serif;
+}
+
+.dolphin-image {
+  height: 150px;
+  width: auto;
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.7));
+}
+
+.dolphin-image.left {
+  transform: rotate(-10deg);
+}
+
+.dolphin-image.right {
+  transform: rotate(10deg) scaleX(-1);
 }
 
 /* Основное содержимое */
@@ -75,6 +99,23 @@ h2 {
 }
 
 h2::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 3px;
+  background-color: #0066cc;
+  margin: 15px auto;
+}
+
+/* Специальные стили для заголовка преимуществ */
+.advantages-title {
+  text-align: center;
+  font-size: 2.5rem;
+  letter-spacing: 3px;
+  margin-bottom: 30px;
+}
+
+.advantages-title::after {
   content: '';
   display: block;
   width: 100px;
@@ -154,30 +195,114 @@ h3 {
   box-shadow: 0 8px 20px rgba(0, 102, 204, 0.4);
 }
 
+/* Блок преимуществ */
+.advantages-section {
+  padding: 80px 0;
+}
+
+.advantages-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.advantages-image {
+  flex: 1;
+}
+
+.advantages-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.advantages-content {
+  flex: 1;
+  text-align: center;
+}
+
+.advantages-description {
+  max-width: 600px;
+  margin: 0 auto 30px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.stat-card {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.percent {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #0066cc;
+  display: block;
+  margin-bottom: 10px;
+}
+
 /* Адаптивность */
+@media (max-width: 992px) {
+  .dolphin-header h1 {
+    font-size: 3.5rem;
+  }
+  
+  .advantages-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+
 @media (max-width: 768px) {
+  .dolphin-header {
+    height: 400px;
+  }
+  
+  .dolphin-header h1 {
+    font-size: 2.5rem;
+  }
+  
+  .dolphin-image {
+    height: 100px;
+  }
+  
   .section-container {
     flex-direction: column;
+  }
+  
+  .advantages-title {
+    font-size: 2rem;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title-container {
+    flex-direction: column;
+    gap: 20px;
   }
   
   .dolphin-header h1 {
     font-size: 2rem;
   }
   
-  h2 {
-    font-size: 1.5rem;
-  }
-  
-  .header-overlay {
-    padding: 20px 30px;
-  }
-  
-  .signup-divider {
-    padding: 40px 0;
-  }
-  
   .signup-button {
     padding: 12px 30px;
-    font-size: 1rem;
   }
 }

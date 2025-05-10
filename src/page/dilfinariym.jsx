@@ -1,15 +1,22 @@
 import React from 'react';
 import '../style/DolphinTherapy.css';
-import delfin1 from '../image/delfin1.svg'
-import delfin2 from '../image/delfin2.svg'
+import delfin1 from '../image/delfin1.svg';
+import delfin2 from '../image/delfin2.svg';
+import delphin from '../image/delphin1.svg';
+import delphin2 from '../image/delphin2.svg';
+import girl from '../image/girl.svg';
 
 const DolphinTherapyPage = () => {
   return (
     <div className="dolphin-page">
       {/* Шапка страницы */}
-      <header className="dolphin-header" >
+      <header className="dolphin_header">
         <div className="header-overlay">
-          <h1>ДЕЛЬФИНОТЕРАПИЯ</h1>
+          <div className="title-container">
+            <img src={delphin} alt="Дельфин" className="dolphin-image left" />
+            <h1>ДЕЛЬФИНОТЕРАПИЯ</h1>
+            <img src={delphin2} alt="Дельфин" className="dolphin-image right" />
+          </div>
         </div>
       </header>
 
@@ -57,6 +64,32 @@ const DolphinTherapyPage = () => {
         <div className="signup-divider">
           <button className="signup-button">ЗАПИСАТЬСЯ</button>
         </div>
+
+        {/* Блок преимуществ */}
+        <section className="advantages-section">
+          <div className="advantages-container">
+            <div className="advantages-image">
+              <img src={girl} alt="Дельфинотерапия" />
+            </div>
+            
+            <div className="advantages-content">
+              <h2>ПРЕИМУЩЕСТВА ДЕЛЬФИНОТЕРАПИИ</h2>
+              
+              <p>Участники отмечают снижение стресса, улучшение социальных навыков и общего состояния.</p>
+              
+              <div className="stats-grid">
+                <div className="stat-card">
+                  <span className="percent">90%</span>
+                  <p>Улучшение концентрации</p>
+                </div>
+                <div className="stat-card">
+                  <span className="percent">75%</span>
+                  <p>Улучшение эмоционального состояния</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
     </div>
   );
