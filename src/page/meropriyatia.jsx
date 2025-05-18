@@ -7,7 +7,7 @@ import cat2 from '../image/cat1.svg';
 import enot from '../image/enot.svg';
 import lebed from '../image/lebeld.svg';
 import morscat from '../image/morscat.svg';
-import draiw from '../image/draiw.svg';
+import draiw from '../image/Group 1 (1).svg';
 import medyza from '../image/medyza.svg';
 import vodrosli from '../image/vodrosli.svg';
 
@@ -15,7 +15,7 @@ const DolphinEvents = () => {
   const [activeInhabitant, setActiveInhabitant] = useState(null);
 
   const inhabitants = [
-    { id: 1, name: "ПЕЛИКАН", image: pilican, description: "Наш пеликан - удивительная птица с большим клювом. Он любит общаться с посетителями и демонстрировать свои навыки рыболовства." },
+    { id: 1, name: "ПЕЛИКАН", image: pilican, description: "Наши пеликаны - удивительные птицы с большим клювом. Они любят общаться с посетителями и демонстрировать свои навыки рыболовства." },
     { id: 2, name: "ЕНОТ", image: enot, description: "Енот-полоскун - самый любопытный обитатель нашего парка. Он обожает играть с различными предметами и угощения." },
     { id: 3, name: "МОРСКОЙ КОТ", image: cat2, description: "Морской кот - грациозное создание, которое прекрасно чувствует себя как в воде, так и на суше. Его выступления всегда вызывают восторг у зрителей." },
     { id: 4, name: "ЛЕБЕДЬ", image: lebed, description: "Белый лебедь - символ грации и красоты. Наши лебеди привыкли к посетителям и часто подплывают близко к берегу." },

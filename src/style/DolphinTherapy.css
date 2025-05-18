@@ -45,14 +45,14 @@
 }
 
 .dolphin-header h1 {
-  font-family: 'Morfin Sans', 'Arial', sans-serif;
+  font-family: 'Morfin Sans', sans-serif;
+  font-weight: 700;
   color: white;
-  font-size: 4.5rem;
+  font-size: 3rem;
   text-transform: uppercase;
-  letter-spacing: 5px;
-  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+  letter-spacing: 3px;
+  text-shadow: none;
   margin: 0;
-  font-weight: 900;
   position: relative;
   z-index: 3;
 }
@@ -62,6 +62,9 @@
   width: auto;
   filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.8));
   transition: all 0.3s ease;
+
+  border-radius: 10px;
+  padding: 5px;
 }
 
 .dolphin-image.left {
@@ -70,7 +73,7 @@
 }
 
 .dolphin-image.right {
-  transform: rotate(180deg) scaleX(-1); /* Полностью перевернут и смотрит вниз */
+  transform: rotate(180deg) scaleX(-1);
   animation: swim-down 4s ease-in-out infinite 0.5s;
   margin-top: 30px;
 }
@@ -129,20 +132,25 @@
 .image-block {
   flex: 1;
   position: relative;
+  background-color: white;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .image-block img {
   width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease;
+  border-radius: 8px;
+  display: block;
+  background-color: white;
+  object-fit: cover;
 }
 
 .image-block:hover img {
   transform: scale(1.02);
 }
 
-/* Заголовки (только Morfin Sans) */
+/* Заголовки */
 h2, h3, .advantages-title {
   font-family: 'Morfin Sans', 'Arial', sans-serif;
 }
@@ -270,12 +278,19 @@ h3 {
 .advantages-image {
   flex: 1;
   position: relative;
+  background-color: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
 
 .advantages-image img {
   width: 100%;
-  border-radius: 15px;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  display: block;
+  background-color: white;
+  object-fit: cover;
 }
 
 .advantages-content {
@@ -376,11 +391,6 @@ h3 {
   .title-container {
     flex-direction: column;
     gap: 20px;
-  }
-  
-  .dolphin-header h1 {
-    font-size: 2.2rem;
-    letter-spacing: 2px;
   }
   
   .dolphin-image {

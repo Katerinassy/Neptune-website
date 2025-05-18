@@ -43,7 +43,38 @@
   padding: 20px 0;
 }
 
-/* Остальные стили (без изменений) */
+/* Стили для изображений */
+.event-image {
+  width: 300px;
+  height: 300px;
+  padding: 15px;
+  border-radius: 10px;
+
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  transition: transform 0.3s ease;
+ 
+}
+
+.event-image:hover {
+  transform: scale(1.03);
+}
+
+.inhabitant-item img {
+  width: 200px;
+  height: 200px;
+  padding: 15px;
+  border-radius: 10px;
+
+  object-fit: contain;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+
+}
+
+
+/* Остальные стили */
 .event-section {
   margin-bottom: 40px;
   max-width: 1200px;
@@ -101,18 +132,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.event-image {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.event-image:hover {
-  transform: scale(1.02);
+  background-color: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 /* Волнистые разделители */
@@ -155,14 +178,13 @@
   background: white;
   border-radius: 10px;
   padding: 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
   transition: all 0.3s ease;
   position: relative;
 }
 
 .inhabitant-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
 .inhabitant-item button {
@@ -174,14 +196,6 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-}
-
-.inhabitant-item img {
-  width: 150px;
-  height: 150px;
-  object-fit: contain;
-  margin-bottom: 15px;
-  transition: transform 0.3s ease;
 }
 
 .inhabitant-item:hover img {
@@ -204,7 +218,7 @@
   background: white;
   padding: 20px;
   border-radius: 0 0 10px 10px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+
   z-index: 10;
   margin-top: 10px;
 }
@@ -227,46 +241,6 @@
   cursor: pointer;
   color: #002f6c;
   padding: 0 5px;
-}
-
-/* Адаптивность */
-@media (max-width: 768px) {
-  .event-section.with-image {
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  .event-section.with-image.reversed {
-    flex-direction: column;
-  }
-  
-  .main-title {
-    font-size: 2rem;
-  }
-  
-  .section-title {
-    font-size: 1.5rem;
-  }
-  
-  .section-subtitle {
-    font-size: 1.2rem;
-  }
-  
-  .inhabitants-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-  }
-}
-
-@media (max-width: 480px) {
-  .inhabitants-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .inhabitant-item img {
-    width: 120px;
-    height: 120px;
-  }
 }
 
 /* Океанский заголовок с декорациями */
@@ -293,6 +267,7 @@
   filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.7));
   z-index: 1;
   animation: float 8s infinite ease-in-out;
+  background-color: transparent !important;
 }
 
 .jellyfish-1 {
@@ -317,6 +292,7 @@
   z-index: 1;
   filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.3));
   height: 150px;
+  background-color: transparent !important;
 }
 
 .seaweed-1 {
@@ -373,8 +349,46 @@
   }
 }
 
-/* Адаптивность для океанского заголовка */
+/* Адаптивность */
+@media (max-width: 992px) {
+  .event-image {
+    width: 250px;
+    height: 250px;
+  }
+}
+
 @media (max-width: 768px) {
+  .event-section.with-image {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .event-section.with-image.reversed {
+    flex-direction: column;
+  }
+  
+  .main-title {
+    font-size: 2rem;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+  }
+  
+  .section-subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .inhabitants-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  
+  .event-image {
+    width: 200px;
+    height: 200px;
+  }
+  
   .ocean-title {
     font-size: 2.2rem;
   }
@@ -395,6 +409,20 @@
 }
 
 @media (max-width: 480px) {
+  .inhabitants-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .inhabitant-item img {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .event-image {
+    width: 180px;
+    height: 180px;
+  }
+  
   .ocean-title {
     font-size: 1.8rem;
     padding: 40px 0;
