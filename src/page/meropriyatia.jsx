@@ -7,7 +7,7 @@ import cat2 from '../image/cat1.svg';
 import enot from '../image/enot.svg';
 import lebed from '../image/lebeld.svg';
 import morscat from '../image/morscat.svg';
-import draiw from '../image/Group 1 (1).svg';
+import draiw from '../image/draiw.svg';
 import medyza from '../image/medyza.svg';
 import vodrosli from '../image/vodrosli.svg';
 

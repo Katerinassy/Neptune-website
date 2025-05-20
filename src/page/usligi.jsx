@@ -3,7 +3,7 @@ import '../style/usligi.css'; // Подключаем стили
 import uslugi1 from '../image/uslugi1.svg';
 import uslugi2 from '../image/uslugi2.svg';
 import uslugi3 from '../image/usugi3.svg';
-import uslugi4 from '../image/uslugi4.svg';
+import uslugi4 from '../image/Group 1 (1).svg';
 import house from '../image/house.svg';
 
 const Usligi = () => {
